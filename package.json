@@ -1,0 +1,23 @@
+{
+    "name": "bedoon",
+    "version": "0.0.1",
+    "author": "Riad Benguella",
+    "description": "yet another no backend solution using mongodb and nodejs",
+    "keywords": [
+        "nobackend",
+        "mongo",
+        "api"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/youknowriad/bedoon.git"
+    },
+    "main": "./lib/index",
+    "dependencies": {
+        "express": "latest",
+        "mongoose": "latest"
+    },
+    "engines": {
+        "node": "*"
+    }
+}
