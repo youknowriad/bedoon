@@ -10,7 +10,7 @@
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/youknowriad/bedoon.git"
+        "url": "http://github.com/youknowriad/bedoon.git"
     },
     "main": "./lib/index",
     "dependencies": {
