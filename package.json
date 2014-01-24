@@ -17,6 +17,9 @@
         "express": "latest",
         "mongoose": "latest"
     },
+    "devDependencies": {
+        "nodeunit": "latest"
+    },
     "engines": {
         "node": "*"
     }
