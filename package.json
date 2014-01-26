@@ -15,7 +15,9 @@
     "main": "./lib/index",
     "dependencies": {
         "express": "latest",
-        "mongoose": "latest"
+        "mongoose": "latest",
+        "passport": "latest",
+        "passport-local": "latest"
     },
     "devDependencies": {
         "nodeunit": "latest"
