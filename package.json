@@ -17,7 +17,8 @@
         "express": "latest",
         "mongoose": "latest",
         "passport": "latest",
-        "passport-local": "latest"
+        "passport-local": "latest",
+        "bcrypt": "latest"
     },
     "devDependencies": {
         "nodeunit": "latest"

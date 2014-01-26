@@ -78,3 +78,30 @@ exports['has one model'] = function(test) {
 
     test.done();
 };
+
+exports['user model'] = function(test) {
+    test.expect(1);
+
+    var userResources = {
+        user: {
+            type: "document",
+            user: true,
+            schema: {
+                attributes: {
+                    name: String
+                }
+            }
+        },
+    },
+    mongoose = require('mongoose'),
+    userSchemaFactory = require('../lib/schema-factory')(userResources, mongoose)
+
+
+    test.deepEqual(userSchemaFactory.getSchemaAttributes('user'), {
+        username: String,
+        password: String,
+        name: String
+    });
+
+    test.done();
+};

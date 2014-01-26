@@ -35,7 +35,8 @@ var resources = {
             }
         }
     },
-    serializer = require('../lib/serializer')(resources);
+    passwordHandler = require('../lib/password-handler'),
+    serializer = require('../lib/serializer')(resources, passwordHandler);
 
 exports['serialize'] = function(test) {
     test.expect(2);
@@ -117,6 +118,58 @@ exports['serializeHasOne'] = function(test) {
             username: 'test',
             password: 'toto'
         }
+    });
+
+    test.done();
+};
+
+exports['serialize user'] = function(test) {
+    test.expect(1);
+
+        var userResources = {
+            user: {
+                type: "document",
+                schema: {},
+                user: true
+            }
+        },
+        userSerializer = require('../lib/serializer')(userResources, passwordHandler);
+
+    var documentUser = {
+        username: 'test',
+        password: 'aaa'
+    };
+
+    test.deepEqual(userSerializer.serialize('user', documentUser, false), {
+        username: 'test'
+    });
+
+    test.done();
+};
+
+exports['hydrate user'] = function(test) {
+    test.expect(1);
+
+        var userResources = {
+            user: {
+                type: "document",
+                schema: {},
+                user: true
+            }
+        },
+        userSerializer = require('../lib/serializer')(userResources, passwordHandler);
+
+    var dataUser = {
+        username: 'test',
+        password: 'aaa'
+    };
+
+    var document = {};
+    userSerializer.hydrate('user', document, dataUser)
+
+    test.deepEqual(document, {
+        username: 'test',
+        password: 'aaa'
     });
 
     test.done();
