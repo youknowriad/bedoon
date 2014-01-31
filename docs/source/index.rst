@@ -9,4 +9,5 @@ Contents:
    :maxdepth: 2
 
    getting_started
+   basic_config
 
