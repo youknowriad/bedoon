@@ -10,4 +10,5 @@ Contents:
 
    getting_started
    basic_config
+   relation_config
 
