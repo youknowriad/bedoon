@@ -11,14 +11,14 @@ which contains all your resources config like this :
 
 .. code-block:: javascript
 
-    var config = {
-        db: 'mongodb://localhost/mydatabase',
+    var config = {
+        db: "mongodb://localhost/mydatabase",
         resources: {
             resource_name: {
                 // resource config details
             }
         }
-    }
+    };
 
 Resource config object
 ----------------------
@@ -28,7 +28,7 @@ A basic resource configuration look like this :
 
 .. code-block:: javascript
 
-    resource_name: {
+    resource_name: {
         type: 'document'
         schema: {
             attributes: {
@@ -45,7 +45,7 @@ The above resource will create a mongo document called "resource_name" and each 
 
 .. code-block:: bash
 
-    GET /resource_name // To retrieve all the records
+    GET /resource_name # To retrieve all the records
 
 response:
 
@@ -65,7 +65,7 @@ response:
 
 .. code-block:: bash
 
-    GET /resource_name/:id // To retrieve a record by its id
+    GET /resource_name/:id # To retrieve a record by its id
 
 response:
 
@@ -81,7 +81,7 @@ response:
 
 .. code-block:: bash
 
-    GET /resource_name?attribute1=value // To retrieve records with some filters
+    GET /resource_name?attribute1=value # To retrieve records with some filters
 
 response:
 
@@ -101,7 +101,7 @@ response:
 
 .. code-block:: bash
 
-    POST /resource_name // To retrieve a record by its id
+    POST /resource_name # To retrieve a record by its id
 
 request body:
 
@@ -126,7 +126,7 @@ response:
 
 .. code-block:: bash
 
-    PUT /resource_name/:id // To retrieve a record by its id
+    PUT /resource_name/:id # To retrieve a record by its id
 
 request body:
 
@@ -152,5 +152,5 @@ response:
 
 .. code-block:: bash
 
-    DELETE /resource_name/:id // To retrieve a record by its id
+    DELETE /resource_name/:id # To retrieve a record by its id
 

@@ -14,11 +14,11 @@ the id of the child object in the parent one (or an array of ids in the case of 
 
 .. code-block:: javascript
 
-    var config = {
-        db: 'mongodb://localhost/mydatabase',
+    var config = {
+        db: "mongodb://localhost/mydatabase"
         resources: {
             user: {
-                type: 'document',
+                type: "document",
                 schema: {
                     attributes: {
                         username: String,
@@ -28,20 +28,20 @@ the id of the child object in the parent one (or an array of ids in the case of 
             },
 
             post: {
-                type: 'document',
+                type: "document",
                 schema: {
                     attributes: {
                         title: String
                     },
                     hasMany: {
-                        comments: {type: 'id', target: 'comment'},
-                        author: {type: 'id', target: 'user'}
+                        comments: {type: "id", target: "comment"},
+                        author: {type: "id", target: "user"}
                     }
                 }
             },
 
             comment: {
-                type: 'document',
+                type: "document",
                 schema: {
                     attributes: {
                         message: String
@@ -73,11 +73,11 @@ the child object in the parent one (or an array of child objects in the case of 
 
 .. code-block:: javascript
 
-    var config = {
-        db: 'mongodb://localhost/mydatabase',
+    var config = {
+        db: "mongodb://localhost/mydatabase"
         resources: {
             user: {
-                type: 'embed',
+                type: "embed",
                 schema: {
                     attributes: {
                         username: String,
@@ -87,20 +87,20 @@ the child object in the parent one (or an array of child objects in the case of 
             },
 
             post: {
-                type: 'document',
+                type: "document",
                 schema: {
                     attributes: {
                         title: String
                     },
                     hasMany: {
-                        comments: {type: 'embed', target: 'comment'},
-                        author: {type: 'embed', target: 'user'}
+                        comments: {type: "embed", target: "comment"},
+                        author: {type: "embed", target: "user"}
                     }
                 }
             },
 
             comment: {
-                type: 'embed',
+                type: "embed",
                 schema: {
                     attributes: {
                         message: String
