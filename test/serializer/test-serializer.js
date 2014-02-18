@@ -35,8 +35,8 @@ var resources = {
             }
         }
     },
-    passwordHandler = require('../lib/password-handler'),
-    serializer = require('../lib/serializer')(resources, passwordHandler);
+    passwordHandler = require('../../lib/security/password-handler'),
+    serializer = require('../../lib/serializer/serializer')(resources, passwordHandler);
 
 exports['serialize'] = function(test) {
     test.expect(2);
@@ -133,7 +133,7 @@ exports['serialize user'] = function(test) {
                 user: true
             }
         },
-        userSerializer = require('../lib/serializer')(userResources, passwordHandler);
+        userSerializer = require('../../lib/serializer/serializer')(userResources, passwordHandler);
 
     var documentUser = {
         username: 'test',
@@ -157,7 +157,7 @@ exports['hydrate user'] = function(test) {
                 user: true
             }
         },
-        userSerializer = require('../lib/serializer')(userResources, passwordHandler);
+        userSerializer = require('../../lib/serializer/serializer')(userResources, passwordHandler);
 
     var dataUser = {
         username: 'test',

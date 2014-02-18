@@ -36,7 +36,7 @@ var resources = {
         }
     },
     mongoose = require('mongoose'),
-    schemaFactory = require('../lib/schema-factory')(resources, mongoose);
+    schemaFactory = require('../../lib/schema/schema-factory')(resources, mongoose);
 
 exports['simple model'] = function(test) {
     test.expect(1);
@@ -94,7 +94,7 @@ exports['user model'] = function(test) {
         },
     },
     mongoose = require('mongoose'),
-    userSchemaFactory = require('../lib/schema-factory')(userResources, mongoose)
+    userSchemaFactory = require('../../lib/schema/schema-factory')(userResources, mongoose)
 
 
     test.deepEqual(userSchemaFactory.getSchemaAttributes('user'), {

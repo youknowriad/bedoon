@@ -1,4 +1,4 @@
-var responseHandler = require('../../lib/utils/response-handler');
+var responseHandler = require('../../lib/http/response-handler');
 
 exports['response success'] = function (test) {
     test.expect(1);
