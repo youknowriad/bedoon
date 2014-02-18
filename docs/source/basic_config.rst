@@ -51,15 +51,18 @@ response:
 
 .. code-block:: javascript
 
-    [
-        {
-            _id: "id",
-            attribute1: "value",
-            attribute2: "value"
-        }
+    {
+        status: "success",
+        data: [
+            {
+                _id: "id",
+                attribute1: "value",
+                attribute2: "value"
+            }
 
-        // ...
-    ]
+            // ...
+        ]
+    }
 
 **Find One**
 
@@ -72,9 +75,12 @@ response:
 .. code-block:: javascript
 
     {
-        _id: "id",
-        attribute1: "value",
-        attribute2: "value"
+        status: "success",
+        data: {
+            _id: "id",
+            attribute1: "value",
+            attribute2: "value"
+        }
     }
 
 **Find Query**
@@ -87,15 +93,18 @@ response:
 
 .. code-block:: javascript
 
-    [
-        {
-            _id: "id",
-            attribute1: "value",
-            attribute2: "value"
-        }
+    {
+        status: "success",
+        data: [
+            {
+                _id: "id",
+                attribute1: "value",
+                attribute2: "value"
+            }
 
-        // ...
-    ]
+            // ...
+        ]
+    }
 
 **Create a record**
 
@@ -117,9 +126,12 @@ response:
 .. code-block:: javascript
 
     {
-        _id: "id",
-        attribute1: "value",
-        attribute2: "value"
+        status: "success",
+        data: {
+            _id: "id",
+            attribute1: "value",
+            attribute2: "value"
+        }
     }
 
 **Update a record**
@@ -143,9 +155,12 @@ response:
 .. code-block:: javascript
 
     {
-        _id: "id",
-        attribute1: "value",
-        attribute2: "value"
+        status: "success",
+        data: {
+            _id: "id",
+            attribute1: "value",
+            attribute2: "value"
+        }
     }
 
 **Delete a record**

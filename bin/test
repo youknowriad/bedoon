@@ -1,0 +1,2 @@
+BASEDIR=$(dirname $0)
+nodeunit $(find $BASEDIR/../test -name \*.js)
