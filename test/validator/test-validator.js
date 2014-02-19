@@ -142,7 +142,7 @@ exports['validate has one'] = function (test) {
             author2: { username: 'message' }
         };
 
-    test.expect(3);
+    test.expect(4);
 
     test.deepEqual(validator.validate('post', data), {
         valid: true,
@@ -170,6 +170,16 @@ exports['validate has one'] = function (test) {
     test.deepEqual(validator.validate('post', data), {
         valid: false,
         messages: [ 'the "username" attribute must be a string' ]
+    });
+    
+    data = data = {
+        title: 'test',
+        author2: { username: 'test' }
+    };
+
+    test.deepEqual(validator.validate('post', data), {
+        valid: true,
+        messages: []
     });
 
     test.done();

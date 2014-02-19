@@ -1,6 +1,6 @@
 {
     "name": "bedoon",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "author": "Riad Benguella",
     "description": "yet another no backend solution using mongodb and nodejs",
     "keywords": [
