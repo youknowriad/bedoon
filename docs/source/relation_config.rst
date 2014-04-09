@@ -1,7 +1,7 @@
 Relations Config
 ================
 
-Bedoon can handle different sort of relations between resources : has may relations and has one relations.
+Bedoon can handle different sort of relations between resources : has many relations and has one relations.
 Each relation type has different strategies that alter the storage and the object contents.
 
 Id Strategy
