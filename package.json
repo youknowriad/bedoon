@@ -1,30 +1,36 @@
 {
-    "name": "bedoon",
-    "version": "1.0.0",
-    "author": "Riad Benguella",
-    "description": "yet another no backend solution using mongodb and nodejs",
-    "keywords": [
-        "nobackend",
-        "mongo",
-        "api"
-    ],
-    "repository": {
-        "type": "git",
-        "url": "http://github.com/youknowriad/bedoon.git"
-    },
-    "main": "./lib/index",
-    "dependencies": {
-        "express": "3.4.*",
-        "mongoose": "3.8.*",
-        "passport": "0.2.*",
-        "passport-local": "0.1.*",
-        "bcrypt": "0.7.*",
-        "socket.io": "0.9.*"
-    },
-    "devDependencies": {
-        "nodeunit": "latest"
-    },
-    "engines": {
-        "node": "*"
-    }
+  "name": "bedoon",
+  "version": "2.0.0",
+  "author": "Riad Benguella",
+  "description": "yet another no backend solution using mongodb and nodejs",
+  "keywords": [
+    "nobackend",
+    "mongo",
+    "api"
+  ],
+  "scripts": {
+    "test": "./node_modules/.bin/nodeunit test/**"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/youknowriad/bedoon.git"
+  },
+  "main": "./lib/index",
+  "dependencies": {
+    "mongoose": "3.8.*",
+    "passport": "0.2.*",
+    "passport-local": "0.1.*",
+    "bcrypt": "0.7.*",
+    "socket.io": "0.9.*",
+    "express": "^4.10.2",
+    "cookie-parser": "^1.3.3",
+    "body-parser": "^1.9.2",
+    "express-session": "^1.9.1"
+  },
+  "devDependencies": {
+    "nodeunit": "latest"
+  },
+  "engines": {
+    "node": "*"
+  }
 }
